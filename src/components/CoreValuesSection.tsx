@@ -48,7 +48,7 @@ const VALUES = [
 
 export default function CoreValuesSection() {
   return (
-    <section id="values" className="bg-[#F5F5F5] px-6 py-24">
+    <section id="values" className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Header */}
         <div className="mb-16">
@@ -69,7 +69,7 @@ export default function CoreValuesSection() {
               <div
                 key={value.title}
                 className="rounded-2xl p-8 min-h-64 flex flex-col justify-between group hover:scale-[1.02] transition-transform duration-300"
-                style={{ backgroundColor: '#2B2644' }}
+                style={{ backgroundColor: '#181511' }}
               >
                 <div>
                   <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center mb-5 group-hover:bg-white/20 transition-colors duration-300">

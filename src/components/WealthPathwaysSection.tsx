@@ -39,7 +39,7 @@ const PATHWAYS = [
 
 export default function WealthPathwaysSection() {
   return (
-    <section id="pathways" className="bg-[#F5F5F5] px-6 py-24">
+    <section id="pathways" className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
@@ -68,7 +68,7 @@ export default function WealthPathwaysSection() {
                 key={pathway.title}
                 className="rounded-2xl p-7 min-h-64 flex flex-col justify-between group hover:scale-[1.03] transition-transform duration-300"
                 style={{
-                  backgroundColor: i % 2 === 0 ? '#2B2644' : '#1A1A2E',
+                  backgroundColor: i % 2 === 0 ? '#181511' : '#0C0A08',
                 }}
               >
                 <div>

@@ -4,7 +4,7 @@ const CARD_IMAGE = '/Images/CARD_IMAGE.jpeg';
 
 export default function InfoSection() {
   return (
-    <section id="about" className="bg-[#F5F5F5] px-6 py-24">
+    <section id="about" className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Row 1 - Intro */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
@@ -58,7 +58,7 @@ export default function InfoSection() {
           {/* Card 2 */}
           <div
             className="rounded-2xl p-7 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#2B2644' }}
+            style={{ backgroundColor: '#181511' }}
           >
             <h3
               className="text-white text-2xl font-medium leading-snug"
@@ -77,7 +77,7 @@ export default function InfoSection() {
           {/* Card 3 */}
           <div
             className="rounded-2xl p-7 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#2B2644' }}
+            style={{ backgroundColor: '#181511' }}
           >
             <h3
               className="text-white text-2xl font-medium leading-snug"

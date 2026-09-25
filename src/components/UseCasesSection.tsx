@@ -4,7 +4,7 @@ const USE_CASE_VIDEO = '/videos/USE_CASE_VIDEO.mp4';
 
 export default function UseCasesSection() {
   return (
-    <section className="bg-[#F5F5F5] px-6 py-24">
+    <section className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         {/* Left column */}
         <div className="md:pr-12 md:pt-2">

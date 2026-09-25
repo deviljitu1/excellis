@@ -58,7 +58,7 @@ function scrollTo(id: string) {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-[#F5F5F5] px-6 py-24">
+    <section id="services" className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
@@ -89,7 +89,7 @@ export default function ServicesSection() {
               className={`rounded-2xl p-8 min-h-72 flex flex-col justify-between group hover:scale-[1.01] transition-transform duration-300 ${
                 service.span ? 'sm:col-span-2' : ''
               }`}
-              style={{ backgroundColor: '#2B2644' }}
+              style={{ backgroundColor: '#181511' }}
             >
               <div>
                 <span className="text-white/30 text-sm font-medium tracking-widest mb-4 block">

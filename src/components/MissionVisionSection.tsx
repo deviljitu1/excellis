@@ -2,13 +2,13 @@ import { Target, Eye } from 'lucide-react';
 
 export default function MissionVisionSection() {
   return (
-    <section className="bg-[#F5F5F5] px-6 py-24">
+    <section className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Mission Card */}
           <div
             className="rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#2B2644' }}
+            style={{ backgroundColor: '#181511' }}
           >
             <div>
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
@@ -35,7 +35,7 @@ export default function MissionVisionSection() {
           {/* Vision Card */}
           <div
             className="rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#1A1A2E' }}
+            style={{ backgroundColor: '#0C0A08' }}
           >
             <div>
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">

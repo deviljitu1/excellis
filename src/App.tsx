@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="flex flex-col bg-[#F5F5F5]">
+    <div className="flex flex-col bg-[#F9F2DC]">
       {/* First viewport - Navbar + Hero */}
       <div className="h-[100dvh] min-h-[600px] flex flex-col overflow-hidden relative">
         <Navbar />

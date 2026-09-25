@@ -6,11 +6,11 @@ function scrollTo(id: string) {
 
 export default function CTASection() {
   return (
-    <section className="bg-[#F5F5F5] px-6 py-24">
+    <section className="bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         <div
           className="rounded-2xl p-8 md:p-20 text-center flex flex-col items-center"
-          style={{ backgroundColor: '#2B2644' }}
+          style={{ backgroundColor: '#181511' }}
         >
           <p className="text-white/40 text-sm uppercase tracking-widest mb-6">
             Your Wealth Is More Than Capital
