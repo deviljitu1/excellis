@@ -83,7 +83,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .section button span, .hero-copy button span { background: transparent; padding: 0; }
 .section button svg, .hero-copy button svg { width: 18px; height: 18px; color: inherit; }
 .hero-frame { position: relative; height: clamp(600px, 42vw, 760px); overflow: hidden; }
-.site-nav { padding: 20px 24px; }
+.site-nav { padding: 12px 24px; }
+.navbar-logo { display: block; width: 132px; height: 78px; object-fit: contain; }
 .brand-logo { display: flex; flex-direction: column; align-items: center; gap: 3px; color: #70532a; white-space: nowrap; }
 .brand-name { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; line-height: 1; letter-spacing: .02em; }
 .brand-tagline { font-size: 9px; line-height: 1.2; letter-spacing: .22em; text-transform: uppercase; }
@@ -94,7 +95,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .site-nav button.text-base { font-size: 13px; color: var(--ink); }
 .site-nav button.bg-black { background: #3c2b16; padding: 10px 22px; color: #fff9e9; }
 .site-nav.bg-white\/90 { background: #faf3dff2; }
-.hero-section { position: absolute; inset: 80px 24px 24px; }
+.hero-section { position: absolute; inset: 112px 24px 24px; }
 .hero-media { position: absolute; inset: 0; height: 100%; border-radius: 16px; border: 1px solid #e4cea155; }
 .hero-media > video { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: none; scale: none; }
 .hero-copy { height: 100%; justify-content: center; max-width: var(--content-width); margin: auto; padding: 24px 48px; }
@@ -203,11 +204,12 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 }
 @media (max-width: 767px) {
   .section { padding: 24px 20px; }
-  .site-nav { padding: 14px 20px; }
+  .site-nav { padding: 8px 20px; }
+  .navbar-logo { width: 112px; height: 66px; }
   .site-nav .brand-name { font-size: 26px; }
-  .site-nav > div:last-child:not(:first-child) { max-height: calc(100svh - 70px); overflow-y: auto; }
+  .site-nav > div:last-child:not(:first-child) { max-height: calc(100svh - 82px); overflow-y: auto; }
   .site-nav button, .hero-copy button, .cta-banner button { min-height: 44px; }
-  .hero-frame { height: auto; min-height: 0; padding: 80px 16px 16px; }
+  .hero-frame { height: auto; min-height: 0; padding: 94px 16px 16px; }
   .hero-section { position: relative; inset: auto; height: clamp(260px, 74vw, 380px); }
   .hero-media { height: 100%; width: 100%; background: #f8efd7; }
   .hero-media > video { position: absolute; height: 100%; object-fit: cover; object-position: center; }

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
-import BrandLogo from './BrandLogo';
 
 const NAV_LINKS = [
   { label: 'Services', target: 'services' },
@@ -43,7 +42,13 @@ export default function Navbar() {
           onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="flex items-center cursor-pointer bg-transparent border-none p-0"
         >
-          <BrandLogo />
+          <img
+            src="/Images/excellion-logo-brushed-gold.png"
+            alt="Excellion Private Wealth"
+            width={132}
+            height={78}
+            className="navbar-logo"
+          />
         </button>
 
         {/* Center - Nav links (hidden below md) */}
