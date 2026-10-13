@@ -1,6 +1,6 @@
 import { ArrowRight, ShieldCheck, Globe } from 'lucide-react';
 
-const CARD_IMAGE = '/Images/CARD_IMAGE.jpeg';
+const CARD_IMAGE = '/Images/capital-growth.png';
 
 export default function InfoSection() {
   return (
