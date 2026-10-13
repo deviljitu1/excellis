@@ -1,4 +1,4 @@
-import { ArrowRight, Globe, Layers, ShieldCheck } from 'lucide-react';
+import { Globe, Layers, ShieldCheck } from 'lucide-react';
 
 const USE_CASE_VIDEO = '/videos/USE_CASE_VIDEO.mp4';
 
@@ -103,15 +103,6 @@ export default function UseCasesSection() {
               properties, and international real estate opportunities across
               select global markets.
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-3 group text-black font-medium text-base"
-            >
-              <span className="w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center group-hover:bg-white transition-colors">
-                <ArrowRight className="w-4 h-4 text-black" />
-              </span>
-              Explore properties
-            </a>
           </div>
         </div>
       </div>

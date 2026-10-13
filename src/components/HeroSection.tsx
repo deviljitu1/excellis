@@ -22,7 +22,7 @@ export default function HeroSection() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="object-cover absolute inset-0 w-full h-full scale-[1.01] border-none outline-none"
+          className="object-cover absolute inset-0 w-full h-full border-none outline-none"
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
