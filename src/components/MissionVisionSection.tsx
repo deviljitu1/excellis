@@ -2,19 +2,22 @@ import { Target, Eye } from 'lucide-react';
 
 export default function MissionVisionSection() {
   return (
-    <section className="bg-[#F9F2DC] px-6 py-24">
+    <section id="mission" className="mission-section section bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Mission Card */}
           <div
-            className="rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#181511' }}
+            className="mission-card rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
+
           >
             <div>
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
                 <Target className="w-6 h-6 text-white/80" />
               </div>
-              <p className="text-white/40 text-sm uppercase tracking-widest mb-3">
+              <p
+                className="text-white/40 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3"
+                style={{ letterSpacing: '0.12em' }}
+              >
                 Our Mission
               </p>
               <h3
@@ -34,14 +37,17 @@ export default function MissionVisionSection() {
 
           {/* Vision Card */}
           <div
-            className="rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
-            style={{ backgroundColor: '#0C0A08' }}
+            className="mission-card rounded-2xl p-10 md:p-12 min-h-80 flex flex-col justify-between"
+
           >
             <div>
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
                 <Eye className="w-6 h-6 text-white/80" />
               </div>
-              <p className="text-white/40 text-sm uppercase tracking-widest mb-3">
+              <p
+                className="text-white/40 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3"
+                style={{ letterSpacing: '0.12em' }}
+              >
                 Our Vision
               </p>
               <h3

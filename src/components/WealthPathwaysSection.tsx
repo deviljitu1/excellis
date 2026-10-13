@@ -39,11 +39,16 @@ const PATHWAYS = [
 
 export default function WealthPathwaysSection() {
   return (
-    <section id="pathways" className="bg-[#F9F2DC] px-6 py-24">
+    <section id="pathways" className="pathways-section section bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
-          <p className="text-black/60 text-sm mb-2">The Wealth Lifecycle</p>
+          <p
+            className="text-black/50 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3"
+            style={{ letterSpacing: '0.12em' }}
+          >
+            The Wealth Lifecycle
+          </p>
           <h2
             className="text-black text-4xl md:text-5xl font-medium leading-tight mb-6"
             style={{ letterSpacing: '-0.03em' }}
@@ -52,7 +57,7 @@ export default function WealthPathwaysSection() {
             <br />
             One connected strategy.
           </h2>
-          <p className="text-black/60 text-base leading-relaxed">
+          <p className="text-black/70 text-xl md:text-2xl leading-relaxed">
             Wealth is not a single event - it is a journey. Our approach guides
             you through every stage, from the first investment to generational
             transfer.
@@ -61,22 +66,20 @@ export default function WealthPathwaysSection() {
 
         {/* Pathways - horizontal cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {PATHWAYS.map((pathway, i) => {
+          {PATHWAYS.map((pathway) => {
             const Icon = pathway.icon;
             return (
               <div
                 key={pathway.title}
-                className="rounded-2xl p-7 min-h-64 flex flex-col justify-between group hover:scale-[1.03] transition-transform duration-300"
-                style={{
-                  backgroundColor: i % 2 === 0 ? '#181511' : '#0C0A08',
-                }}
+                className="pathway-card rounded-2xl p-7 min-h-64 flex flex-col justify-between group hover:scale-[1.03] transition-transform duration-300"
+
               >
                 <div>
                   <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center mb-5 group-hover:bg-white/20 transition-colors duration-300">
                     <Icon className="w-5 h-5 text-white/80" />
                   </div>
                   <h3
-                    className="text-white text-lg font-medium leading-snug mb-2"
+                    className="text-white text-xl font-medium leading-snug mb-2"
                     style={{ letterSpacing: '-0.02em' }}
                   >
                     {pathway.title}

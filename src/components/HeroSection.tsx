@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const HERO_VIDEO = '/videos/hero-bg.mp4';
@@ -10,62 +9,40 @@ function scrollTo(id: string) {
 }
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      // Reset the video 0.15 seconds before the end to skip the laggy final frame
-      if (videoRef.current.currentTime >= videoRef.current.duration - 0.15) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play();
-      }
-    }
-  };
-
   return (
-    <section className="flex-1 px-6 pt-20 pb-6 flex items-end">
+    <section className="hero-section">
       <div
-        className="relative w-full rounded-2xl overflow-hidden"
-        style={{ height: 'calc(100vh - 96px)' }}
+        className="hero-media relative w-full overflow-hidden"
       >
         {/* Background video */}
         <video
-          ref={videoRef}
           autoPlay
           muted
+          loop
           playsInline
-          onTimeUpdate={handleTimeUpdate}
+          aria-hidden="true"
           className="object-cover absolute inset-0 w-full h-full scale-[1.01] border-none outline-none"
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
 
         {/* Content overlay */}
-        <div className="relative z-10 flex flex-col items-start justify-center md:justify-start h-full p-6 pt-16 md:p-12 md:pt-36">
+        <div className="hero-copy relative z-10 flex flex-col items-start">
           <p
-            className="text-black/50 text-sm md:text-base font-medium tracking-widest uppercase mb-4"
+            className="text-black/50 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4"
             style={{ letterSpacing: '0.15em' }}
           >
             Build Wealth. Create Legacy.
           </p>
 
           <h1
-            className="text-black text-4xl sm:text-5xl md:text-6xl font-medium leading-tight max-w-xl mb-4"
-            style={{ letterSpacing: '-0.04em' }}
-          >
-            Strategic Wealth
-            <br />
-            Management
-          </h1>
-
-          <p
-            className="text-black/70 text-base md:text-lg max-w-md mb-6 md:mb-8 leading-relaxed"
-            style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}
+            className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-semibold leading-[1.25] max-w-2xl mb-6 md:mb-8"
+            style={{ letterSpacing: '-0.03em' }}
           >
             We bring together investment expertise, global opportunities, and
             personalized advisory to help you move from wealth creation to
             lasting legacy.
-          </p>
+          </h1>
 
           <button
             onClick={() => scrollTo('services')}

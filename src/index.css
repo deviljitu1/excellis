@@ -1,26 +1,9 @@
 @import "tailwindcss";
 
-/* ── TT Norms Pro ── */
-@font-face {
-  font-family: "TT Norms Pro";
-  src: url("/fonts/tt-norms-pro-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "TT Norms Pro";
-  src: url("/fonts/tt-norms-pro-semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── Global reset ── */
 html,
 body {
-  font-family: "TT Norms Pro", ui-sans-serif, system-ui, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,4 +42,199 @@ body {
   display: flex;
   width: max-content;
   animation: backers-marquee 30s linear infinite;
+}
+
+:root {
+  --cream: #faf3df;
+  --ink: #28251e;
+  --gold: #bc9149;
+  --line: #e4cea1;
+  --content-width: 1120px;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--cream); color: var(--ink); }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+.site-shell { background: radial-gradient(ellipse at 50% 30%, #fff9e9, var(--cream) 70%); }
+.site-shell h1, .site-shell h2, .site-shell h3, .practice-highlights h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -.035em;
+}
+.section { background: transparent; padding: 28px 24px; }
+.section > div, .site-footer > div, .site-nav > div:first-child { max-width: var(--content-width); }
+.section h2 { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.04; }
+.section h3 { font-size: 24px; line-height: 1.15; }
+.section p { font-size: 15px; line-height: 1.5; color: #787265; }
+.section > div > div:first-child > p:first-child,
+.intro-grid > div:first-child > p:first-child,
+.pathways-section > div > div:first-child > p:first-child {
+  font-size: 12px; text-transform: none; font-weight: 400; letter-spacing: .02em !important; margin-bottom: 10px;
+}
+.section h2::after { content: ''; display: block; width: 48px; height: 2px; background: var(--gold); margin-top: 14px; }
+.section button, .hero-copy button, .site-nav button.bg-black, .site-footer button.bg-white {
+  display: inline-flex; align-items: center; gap: 14px;
+  border-radius: 999px; padding: 12px 24px; font-size: 14px; font-weight: 500;
+  background: linear-gradient(110deg, #ad823c, #d6ad62); color: #fff9e9;
+  border: 1px solid transparent; transition: filter .2s, transform .2s;
+}
+.section button:hover, .hero-copy button:hover { filter: brightness(1.08); }
+.section button span, .hero-copy button span { background: transparent; padding: 0; }
+.section button svg, .hero-copy button svg { width: 18px; height: 18px; color: inherit; }
+.hero-frame { position: relative; height: clamp(520px, 35vw, 640px); overflow: hidden; }
+.site-nav { padding: 20px 24px; }
+.site-nav img { height: 48px; }
+.site-nav > div:first-child { gap: 28px; }
+.site-nav .md\:flex { gap: 28px; }
+.site-nav button.text-base { font-size: 13px; color: var(--ink); }
+.site-nav button.bg-black { background: #3c2b16; padding: 10px 22px; color: #fff9e9; }
+.site-nav.bg-white\/90 { background: #faf3dff2; }
+.hero-section, .hero-media { position: absolute; inset: 0; height: 100%; }
+.hero-media > video { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: none; scale: none; }
+.hero-copy { height: 100%; justify-content: center; max-width: var(--content-width); margin: auto; padding: 90px 0 24px; }
+.hero-copy > p { font-size: 12px; margin-bottom: 18px; color: #857963; }
+.hero-copy h1 { font-size: clamp(30px, 2.75vw, 40px); line-height: 1.09; max-width: 470px; margin-bottom: 26px; }
+.hero-copy button { background: linear-gradient(110deg, #47351b, #95763c); }
+.intro-grid { gap: 70px; margin-bottom: 30px; align-items: start; }
+.intro-grid > p, .intro-grid > div:nth-child(2) p { font-size: 20px; line-height: 1.5; color: #625e54; }
+.about-section { padding-top: 48px; padding-bottom: 16px; }
+.about-section h2 { margin-bottom: 18px; }
+.about-section button { background: #fcf0d5; border-color: var(--line); color: #4e3d21; }
+.benefit-grid { grid-template-columns: 2.15fr 1fr 1fr; gap: 16px; }
+.growth-card, .benefit-card { border: 1px solid var(--line); border-radius: 14px; min-height: 282px; padding: 28px 30px; box-shadow: 0 8px 22px #b7914420; justify-content: start; }
+.growth-card { grid-column: auto; background-position: center !important; }
+.growth-card h3 { max-width: 230px; margin-bottom: 12px; }
+.growth-card p { max-width: 220px; }
+.benefit-card { background: linear-gradient(125deg, #fff9e9, #f9edce); }
+.benefit-card h3 { font-size: 23px; margin: 16px 0 12px; }
+.gold-icon, .value-card .rounded-full, .pathway-card .rounded-full, .service-icon {
+  width: 60px; height: 60px; flex-shrink: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 35% 25%, #ffefbe, #dbb365 68%, #b48638); border: 1px solid #e4c789;
+  box-shadow: inset 0 0 0 4px #fff1cb55; color: #655024;
+}
+.gold-icon svg { width: 29px; height: 29px; }
+.mission-section { padding-top: 16px; padding-bottom: 28px; }
+.mission-card { position: relative; overflow: hidden; min-height: 350px; padding: 32px 36px; border-radius: 14px;
+  background: linear-gradient(110deg, #2c1c0bc9, #6b481e70), url('/Images/gold-satin.png') center / cover, #3c2913; }
+.mission-card:nth-child(2) { background-position: right center; }
+.mission-card h3 { color: #fff1cc; font-size: 27px; margin-bottom: 18px; }
+.mission-card p { color: #dbc9a7; font-size: 15px; line-height: 1.6; }
+.mission-card > div { display: grid; grid-template-columns: 60px 1fr; column-gap: 18px; align-items: center; }
+.mission-card > div > .rounded-full { grid-row: 1; width: 60px; height: 60px; margin-bottom: 16px; background: #b5904540; border: 1px solid #d6af6855; }
+.mission-card > div > .rounded-full svg { color: #dfbe77; }
+.mission-card > div > p { font-size: 11px; letter-spacing: .23em !important; text-transform: uppercase; color: #ddbd7d; margin-bottom: 16px; }
+.mission-card h3 { grid-column: 1 / -1; }
+.values-section > div > div:first-child { margin-bottom: 24px; }
+.value-card, .service-card, .pathway-card {
+  border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(130deg, #fffaf0, #f7eacb);
+  box-shadow: 0 7px 20px #ae89381a; min-height: 0; transform: none;
+}
+.value-card { display: grid; grid-template-columns: 58px 1fr; padding: 24px; column-gap: 18px; align-content: start; min-height: 180px; }
+.value-card > div { display: contents; }
+.value-card .rounded-full { grid-column: 1; grid-row: 1 / 3; width: 58px; height: 58px; margin: 0; }
+.value-card h3 { grid-column: 2; font-size: 21px; margin: 8px 0 12px; }
+.value-card > p { grid-column: 2; font-size: 13px; }
+.value-card svg, .pathway-card svg { color: #655024; width: 26px; height: 26px; }
+.services-section { padding-top: 28px; }
+.services-section .intro-grid { align-items: center; margin-bottom: 24px; }
+.services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.service-card { position: relative; grid-column: auto; padding: 24px 26px 24px 110px; min-height: 178px; justify-content: start; }
+.service-card h3 { font-size: 23px; margin-bottom: 12px; }
+.service-card p { font-size: 14px; }
+.service-icon { position: absolute; left: 26px; top: 24px; }
+.service-icon svg { width: 28px; height: 28px; }
+.service-card .service-number { display: block; color: #806634; font-size: 10px; letter-spacing: .12em; margin-top: 6px; }
+.service-card:last-child { grid-column: 1 / -1; }
+.practice-section > div { gap: 48px; }
+.practice-section h2 { margin-bottom: 22px; }
+.practice-section > div > div:first-child > p:not(:first-child) { font-size: 18px; margin-bottom: 24px; }
+.practice-highlights { margin-bottom: 0; }
+.practice-highlights > div { padding: 12px 0; border: 0; background: transparent; gap: 14px; }
+.practice-highlights .rounded-xl { background: linear-gradient(140deg, #e7c77f, #bd9247); border-radius: 50%; width: 38px; height: 38px; }
+.practice-highlights h4 { font-size: 18px; margin-bottom: 6px; }
+.practice-highlights p { font-size: 13px; }
+.property-card { min-height: 520px; border-radius: 14px; }
+.property-card > div { padding: 32px; }
+.property-card h3 { font-size: 36px; max-width: 210px; }
+.property-card p { font-size: 15px; max-width: 290px; margin-bottom: 22px; color: #5f512e; }
+.property-card a { display: inline-flex; flex-direction: row-reverse; background: #fff4d8; border: 1px solid #dfc084; padding: 10px 18px; border-radius: 999px; font-size: 13px; gap: 12px; }
+.property-card a span { background: transparent; width: auto; height: auto; }
+.pathways-section > div > div:first-child { margin-bottom: 24px; max-width: 800px; }
+.pathways-section h2 { margin-bottom: 16px; }
+.pathways-section > div > div:first-child > p:last-child { font-size: 16px; }
+.pathway-card { padding: 18px 20px; justify-content: start; }
+.pathway-card .rounded-full { width: 42px; height: 42px; margin-bottom: 14px; }
+.pathway-card svg { width: 21px; height: 21px; }
+.pathway-card h3 { font-size: 20px; margin-bottom: 10px; }
+.pathway-card p { font-size: 13px; }
+.cta-section { padding: 8px 24px 20px; }
+.cta-section > div { max-width: 1260px; }
+.cta-banner { border-radius: 14px; padding: 38px 24px 28px; min-height: 350px;
+  background: linear-gradient(#39230d20, #39230d20), url('/Images/gold-satin.png') center / cover, #3c2913; }
+.cta-banner h2 { color: #fff3d5; font-size: 43px; line-height: 1.02; max-width: 560px; margin-bottom: 16px; }
+.cta-banner h2::after { display: none; }
+.cta-banner > p:first-child { font-size: 10px; letter-spacing: .18em !important; color: #ddc79e; margin-bottom: 20px; }
+.cta-banner > p:not(:first-child) { color: #e0ccaa; max-width: 480px; font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
+.cta-banner button { background: #fff4db; color: #433018; padding: 10px 22px; font-size: 13px; }
+.site-footer { background: #2b1c10; padding: 34px 24px 22px; }
+.site-footer > div > div:first-child { grid-template-columns: 1.65fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 28px; }
+.site-footer .md\:col-span-2 { grid-column: auto; }
+.site-footer img { height: 44px; filter: brightness(0) saturate(100%) invert(80%) sepia(23%) saturate(693%) hue-rotate(355deg) brightness(89%); }
+.site-footer button:has(img) { margin-bottom: 12px; }
+.site-footer p { font-size: 12px; color: #bba98b; }
+.site-footer h4 { font-size: 11px; margin-bottom: 16px; color: #d0b887; }
+.site-footer ul { display: grid; gap: 7px; }
+.site-footer li button { font-size: 12px; color: #bba98b; }
+.site-footer button.bg-white { background: #fff2d3; color: #40301b; padding: 8px 20px; font-size: 12px; }
+.site-footer .mt-8 { margin-top: 20px; padding-top: 16px; }
+.site-footer > div > div:last-child { padding-top: 20px; }
+.site-footer > div > div:last-child p { font-size: 10px; color: #ad9878; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-copy { padding-left: 7%; padding-right: 7%; }
+  .section > div, .site-footer > div, .site-nav > div:first-child { max-width: 1040px; }
+  .value-card { padding: 20px 16px; gap: 12px; }
+  .value-card h3 { font-size: 19px; }
+  .site-footer > div > div:first-child { gap: 28px; }
+}
+@media (max-width: 767px) {
+  .section { padding: 24px 20px; }
+  .site-nav { padding: 14px 20px; }
+  .site-nav img { height: 42px; }
+  .hero-frame { height: auto; min-height: 640px; min-height: max(640px, 100svh); }
+  .hero-section, .hero-media { height: 100%; width: 100%; }
+  .hero-media > video { object-fit: cover; object-position: 62% center; }
+  .hero-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #fbf2dbef, #fbf2db94 58%, #fbf2db10); }
+  .hero-copy { padding: 100px 24px 48px; justify-content: center; }
+  .hero-copy h1 { font-size: clamp(32px, 7vw, 44px); max-width: 480px; line-height: 1.12; }
+  .hero-copy > p { font-size: 10px; }
+  .hero-copy button { font-size: 13px; }
+  .intro-grid { gap: 20px; margin-bottom: 24px; }
+  .intro-grid > p, .intro-grid > div:nth-child(2) p { font-size: 17px; }
+  .section h2 { font-size: 34px; }
+  .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .growth-card { grid-column: 1 / -1; min-height: 260px; }
+  .benefit-card { padding: 22px 18px; min-height: 265px; }
+  .benefit-card h3 { font-size: 22px; }
+  .benefit-card p { font-size: 13px; }
+  .mission-card { padding: 28px; min-height: 340px; }
+  .value-card { padding: 22px; min-height: 160px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { padding: 22px 20px 22px 92px; min-height: 0; }
+  .service-card h3 { font-size: 22px; }
+  .service-icon { left: 20px; top: 22px; width: 52px; height: 52px; }
+  .property-card { min-height: 480px; }
+  .property-card > div { padding: 28px; }
+  .practice-section > div { gap: 28px; }
+  .pathway-card { padding: 22px; }
+  .cta-section { padding: 12px 16px 20px; }
+  .cta-banner { padding: 34px 22px; min-height: 390px; }
+  .cta-banner h2 { font-size: 34px; }
+  .site-footer { padding: 32px 24px 22px; }
+  .site-footer > div > div:first-child { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+  .site-footer > div > div:first-child > div:first-child { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }

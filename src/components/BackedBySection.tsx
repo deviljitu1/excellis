@@ -43,7 +43,7 @@ export default function BackedBySection() {
     <section className="bg-[#F9F2DC] px-6">
       <div className="max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
         {/* Left - description */}
-        <p className="text-black/70 text-base leading-relaxed">
+        <p className="text-black/70 text-base md:text-lg leading-relaxed">
           Guided by the standards
           <br />
           of the world's leading institutions.

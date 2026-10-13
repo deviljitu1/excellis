@@ -1,5 +1,6 @@
-import { ArrowRight } from 'lucide-react';
+import { ChartNoAxesCombined, ChartPie, ShieldCheck, Globe, Landmark, Layers, Sprout } from 'lucide-react';
 
+const SERVICE_ICONS = [ChartNoAxesCombined, ChartPie, ShieldCheck, Globe, Landmark, Layers, Sprout];
 const SERVICES = [
   {
     number: '01',
@@ -52,25 +53,24 @@ const SERVICES = [
   },
 ] as const;
 
-function scrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-}
-
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-[#F9F2DC] px-6 py-24">
+    <section id="services" className="services-section section bg-[#F9F2DC] px-6 py-24">
       <div className="max-w-[88rem] mx-auto">
         {/* Header */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
+        <div className="intro-grid grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
           <div>
-            <p className="text-black/60 text-sm mb-2">What We Offer</p>
+            <p
+              className="text-black/50 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3"
+              style={{ letterSpacing: '0.12em' }}
+            >
+              What We Offer
+            </p>
             <h2
               className="text-black text-4xl md:text-5xl font-medium leading-tight"
               style={{ letterSpacing: '-0.03em' }}
             >
-              Wealth Management
-              <br />
-              Services
+              Our Services
             </h2>
           </div>
           <div className="flex flex-col justify-end">
@@ -82,45 +82,22 @@ export default function ServicesSection() {
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SERVICES.map((service) => (
-            <div
-              key={service.number}
-              className={`rounded-2xl p-8 min-h-72 flex flex-col justify-between group hover:scale-[1.01] transition-transform duration-300 ${
-                service.span ? 'sm:col-span-2' : ''
-              }`}
-              style={{ backgroundColor: '#181511' }}
-            >
-              <div>
-                <span className="text-white/30 text-sm font-medium tracking-widest mb-4 block">
-                  {service.number}
-                </span>
-                <h3
-                  className="text-white text-xl md:text-2xl font-medium leading-snug mb-4"
-                  style={{ letterSpacing: '-0.02em' }}
-                >
-                  {service.title}
-                </h3>
+        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {SERVICES.map((service, index) => {
+            const Icon = SERVICE_ICONS[index];
+            return (
+              <div key={service.number} className="service-card flex flex-col">
+                <div>
+                  <span className="service-icon" aria-hidden="true"><Icon /></span>
+                  <span className="service-number">{service.number}</span>
+                  <h3>{service.title}</h3>
+                </div>
+                <p>{service.description}</p>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed max-w-md">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 text-center">
-          <button
-            onClick={() => scrollTo('contact')}
-            className="inline-flex items-center gap-3 bg-black text-white text-base font-medium pl-8 pr-2 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
-          >
-            Explore All Services
-            <span className="bg-white rounded-full p-2 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 text-black" />
-            </span>
-          </button>
-        </div>
       </div>
     </section>
   );
