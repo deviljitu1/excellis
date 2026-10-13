@@ -84,7 +84,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .section button svg, .hero-copy button svg { width: 18px; height: 18px; color: inherit; }
 .hero-frame { position: relative; height: clamp(600px, 42vw, 760px); overflow: hidden; }
 .site-nav { padding: 20px 24px; }
-.site-nav img { height: 48px; }
+.brand-logo { display: flex; flex-direction: column; align-items: center; gap: 3px; color: #70532a; white-space: nowrap; }
+.brand-name { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; line-height: 1; letter-spacing: .02em; }
+.brand-tagline { font-size: 9px; line-height: 1.2; letter-spacing: .22em; text-transform: uppercase; }
+.section .grid > *, .site-footer .grid > * { min-width: 0; }
+.contact-dialog .flex > div:not(.shrink-0) { min-width: 0; overflow-wrap: anywhere; }
 .site-nav > div:first-child { gap: 28px; }
 .site-nav .md\:flex { gap: 28px; }
 .site-nav button.text-base { font-size: 13px; color: var(--ink); }
@@ -179,8 +183,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 .site-footer { background: #2b1c10; padding: 34px 24px 22px; }
 .site-footer > div > div:first-child { grid-template-columns: 1.65fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 28px; }
 .site-footer .md\:col-span-2 { grid-column: auto; }
-.site-footer img { height: 44px; filter: brightness(0) saturate(100%) invert(80%) sepia(23%) saturate(693%) hue-rotate(355deg) brightness(89%); }
-.site-footer button:has(img) { margin-bottom: 12px; }
+.site-footer .brand-logo { color: #d6ad62; }
+.site-footer button:has(.brand-logo) { margin-bottom: 12px; }
+.site-footer .mt-8 p { flex-wrap: wrap; overflow-wrap: anywhere; }
 .site-footer p { font-size: 12px; color: #bba98b; }
 .site-footer h4 { font-size: 11px; margin-bottom: 16px; color: #d0b887; }
 .site-footer ul { display: grid; gap: 7px; }
@@ -199,7 +204,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
 @media (max-width: 767px) {
   .section { padding: 24px 20px; }
   .site-nav { padding: 14px 20px; }
-  .site-nav img { height: 42px; }
+  .site-nav .brand-name { font-size: 26px; }
+  .site-nav > div:last-child:not(:first-child) { max-height: calc(100svh - 70px); overflow-y: auto; }
+  .site-nav button, .hero-copy button, .cta-banner button { min-height: 44px; }
   .hero-frame { height: auto; min-height: 0; padding: 80px 16px 16px; }
   .hero-section { position: relative; inset: auto; height: clamp(260px, 74vw, 380px); }
   .hero-media { height: 100%; width: 100%; background: #f8efd7; }
@@ -234,6 +241,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-
   .site-footer { padding: 32px 24px 22px; }
   .site-footer > div > div:first-child { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
   .site-footer > div > div:first-child > div:first-child { grid-column: 1 / -1; }
+  .site-footer li button { min-height: 32px; }
+}
+@media (max-width: 359px) {
+  .benefit-grid { grid-template-columns: 1fr; }
+  .benefit-card { min-height: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -1,3 +1,5 @@
+import BrandLogo from './BrandLogo';
+
 const FOOTER_LINKS = {
   Services: [
     'Stock Advisory',
@@ -50,7 +52,7 @@ export default function Footer() {
         window.dispatchEvent(
           new CustomEvent('open-info-modal', {
             detail: {
-              title: 'Careers at Excellis',
+              title: 'Careers at Excellion Private Wealth',
               category: 'Talent & Opportunities',
               content: [
                 'We welcome inquiries from exceptional wealth strategists, research analysts, and private client advisors.',
@@ -82,7 +84,7 @@ export default function Footer() {
           title: 'Privacy Policy',
           category: 'Legal & Compliance',
           content: [
-            'Excellis Wealth Management strictly protects client confidentiality and financial data integrity.',
+            'Excellion Private Wealth strictly protects client confidentiality and financial data integrity.',
             'Personal and financial data is processed in compliance with global fiduciary standards and regional privacy frameworks.',
             'For compliance or data privacy inquiries, contact our legal counsel at: privacy@excellis.com.',
           ],
@@ -107,7 +109,7 @@ export default function Footer() {
           title: 'Regulatory & Licensing',
           category: 'Compliance Oversight',
           content: [
-            'Excellis Wealth Management operates through regulated entities and partnered fiduciary custodians across premier international hubs.',
+            'Excellion Private Wealth operates through regulated entities and partnered fiduciary custodians across premier international hubs.',
             'Advisory activities are subject to local financial regulatory standards in the United Kingdom, United States, Singapore, and Switzerland.',
           ],
         },
@@ -142,7 +144,7 @@ export default function Footer() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center mb-6 cursor-pointer bg-transparent border-none p-0"
             >
-              <img src="/EXCELLIS.png" alt="Excellis" className="h-10 w-auto object-contain brightness-0 invert" />
+              <BrandLogo />
             </button>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               Strategic wealth management for a global future. We help you
@@ -198,7 +200,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/30 text-xs">
-              © {new Date().getFullYear()} Excellis Wealth Management. All rights
+              © {new Date().getFullYear()} Excellion Private Wealth. All rights
               reserved.
             </p>
           </div>

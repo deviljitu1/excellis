@@ -43,7 +43,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
       {/* Modal Dialog */}
       <div
-        className="relative w-full max-w-2xl rounded-3xl p-6 sm:p-10 shadow-2xl z-10 max-h-[90vh] overflow-y-auto"
+        className="contact-dialog relative w-full max-w-2xl rounded-3xl p-6 sm:p-10 shadow-2xl z-10 max-h-[90vh] overflow-y-auto"
         style={{ backgroundColor: '#181511', color: '#ffffff' }}
       >
         {/* Close Button */}

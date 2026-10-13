@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 const NAV_LINKS = [
   { label: 'Services', target: 'services' },
@@ -42,7 +43,7 @@ export default function Navbar() {
           onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="flex items-center cursor-pointer bg-transparent border-none p-0"
         >
-          <img src="/EXCELLIS.png" alt="Excellis" className="h-10 md:h-14 w-auto object-contain" />
+          <BrandLogo />
         </button>
 
         {/* Center - Nav links (hidden below md) */}
