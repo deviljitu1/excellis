@@ -201,11 +201,6 @@ export default function Footer() {
               © {new Date().getFullYear()} Excellis Wealth Management. All rights
               reserved.
             </p>
-            <p className="text-white/30 text-xs text-center md:text-right max-w-lg">
-              This content is for informational purposes only and does not
-              constitute financial advice. All investments carry risk. Past
-              performance does not guarantee future results.
-            </p>
           </div>
         </div>
       </div>
